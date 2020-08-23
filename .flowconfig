@@ -1,14 +1,18 @@
 [ignore]
+.*/build/.*
 
 [include]
 
 [libs]
+flow-typed/**/*
 
 [lints]
 
 [options]
-module.name_mapper='^\([^\.].*\)$' -> '<PROJECT_ROOT>/src/\1'
 module.file_ext=.css
 module.file_ext=.less
+module.file_ext=.json
+module.file_ext=.js
+module.name_mapper='^\([^\.].*\)$' -> '<PROJECT_ROOT>/src/\1'
 
 [strict]
