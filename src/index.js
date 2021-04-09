@@ -2,15 +2,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './theme/app.less';
+import { ConnectedRouter } from 'connected-react-router';
 import App from 'app/index';
+import history from 'app/history';
 import store from 'app/store';
 import * as serviceWorker from 'serviceWorker';
+import './theme/app.less';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ConnectedRouter history={history}>
+        <App />
+      </ConnectedRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

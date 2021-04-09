@@ -1,6 +1,6 @@
 module.exports = function override(config) {
-  config.module.rules[2].oneOf.splice(
-    config.module.rules[2].oneOf.length - 1,
+  config.module.rules[1].oneOf.splice(
+    config.module.rules[1].oneOf.length - 1,
     0,
     {
       test: /\.less$/,
