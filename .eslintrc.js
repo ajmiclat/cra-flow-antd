@@ -45,9 +45,6 @@ module.exports = {
   plugins: ['flowtype', 'jsx-a11y', 'import', 'react', 'react-hooks'],
 
   rules: {
-    // disallow dangling underscores in identifiers
-    // need to allow all global defined vars
-    // https://eslint.org/docs/rules/no-underscore-dangle
     'no-underscore-dangle': [
       'error',
       {
@@ -57,14 +54,7 @@ module.exports = {
         enforceInMethodNames: true,
       },
     ],
-    // require camel case names
-    // will disable for now
     camelcase: ['off', { properties: 'never' }],
-    // disallow declaration of variables already declared in the outer scope
-    // need to disable fow now
-    'no-shadow': 'off',
-    // we need to dynamic require things
-    // https://eslint.org/docs/rules/global-require
     'global-require': 'off',
     'no-console': 0,
     'prefer-destructuring': [

@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.1.0",
-    "antd": "^4.5.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "@reduxjs/toolkit": "^1.5.1",
+    "antd": "^4.15.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "styled-components": "^5.1.1"
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.2.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -26,7 +26,7 @@
     "eslint-plugin-react": "^7.20.6",
     "flow-bin": "^0.131.0",
     "flow-typed": "^3.2.1",
-    "husky": "^4.2.5",
+    "husky": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
     "lint-staged": "^10.2.11",
@@ -42,21 +42,17 @@
     "eject": "react-scripts eject",
     "flow": "flow check ./src --show-all-branches",
     "lint": "eslint -c .eslintrc.js .",
-    "prettier": "prettier --write **/src/**/*.js"
+    "prettier": "prettier --write **/src/**/*.js",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js}": [
       "prettier --write",
       "eslint --fix"
     ],
     "*.{less,css}": [
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run flow"
-    }
   },
   "browserslist": {
     "production": [
